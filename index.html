@@ -11,71 +11,89 @@
 
     <header>
         <h1>🎵 Organizador de Música</h1>
-        <p>Organiza tus canciones y crea tus playlists</p>
+        <p>Organiza tus canciones de manera sencilla</p>
     </header>
 
     <main>
 
         <section class="buscador">
             <h2>Buscar música</h2>
-            <input type="text" placeholder="Buscar canción o artista...">
+            <input 
+                type="text" 
+                placeholder="🔎 Escribe el nombre de una canción..."
+            >
         </section>
 
         <section class="canciones">
-            <h2>Mis canciones</h2>
+            <div class="titulo-seccion">
+                <h2>Mis canciones</h2>
+                <button>+ Agregar canción</button>
+            </div>
 
-            <div class="cancion">
-                <div>
-                    <h3>Perfect</h3>
-                    <p>Ed Sheeran</p>
+            <div class="lista">
+
+                <div class="cancion">
+                    <div class="icono">🎧</div>
+                    <div class="informacion">
+                        <h3>Blinding Lights</h3>
+                        <p>The Weeknd</p>
+                    </div>
+                    <span class="genero">Pop</span>
                 </div>
-                <span>▶</span>
-            </div>
 
-            <div class="cancion">
-                <div>
-                    <h3>Love Story</h3>
-                    <p>Taylor Swift</p>
+                <div class="cancion">
+                    <div class="icono">🎵</div>
+                    <div class="informacion">
+                        <h3>As It Was</h3>
+                        <p>Harry Styles</p>
+                    </div>
+                    <span class="genero">Pop</span>
                 </div>
-                <span>▶</span>
-            </div>
 
-            <div class="cancion">
-                <div>
-                    <h3>APT.</h3>
-                    <p>ROSÉ & Bruno Mars</p>
+                <div class="cancion">
+                    <div class="icono">🎶</div>
+                    <div class="informacion">
+                        <h3>APT.</h3>
+                        <p>ROSÉ & Bruno Mars</p>
+                    </div>
+                    <span class="genero">K-Pop</span>
                 </div>
-                <span>▶</span>
-            </div>
 
-        </section>
-
-        <section class="playlists">
-            <h2>Mis playlists</h2>
-
-            <div class="playlist">
-                <h3>❤️ Mis favoritas</h3>
-                <p>12 canciones</p>
-            </div>
-
-            <div class="playlist">
-                <h3>🎧 Para estudiar</h3>
-                <p>8 canciones</p>
-            </div>
-
-            <div class="playlist">
-                <h3>🌙 Para relajarse</h3>
-                <p>15 canciones</p>
             </div>
         </section>
 
-        <button class="agregar">+ Agregar canción</button>
+        <section class="categorias">
+            <h2>Mis categorías</h2>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+                    <span>❤️</span>
+                    <h3>Favoritas</h3>
+                    <p>12 canciones</p>
+                </div>
+
+                <div class="tarjeta">
+                    <span>🎤</span>
+                    <h3>Pop</h3>
+                    <p>24 canciones</p>
+                </div>
+
+                <div class="tarjeta">
+                    <span>🎧</span>
+                    <h3>K-Pop</h3>
+                    <p>18 canciones</p>
+                </div>
+
+            </div>
+        </section>
 
     </main>
 
     <footer>
-        <p>Organizador de Música © 2026</p>
+        <p>🎵 Organizador de Música</p>
+        <p>Proyecto realizado con HTML y CSS</p>
     </footer>
 
 </body>
-</html>
+    </html>
