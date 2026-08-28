@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f1f8;
+    color: #2d2633;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background: #6c4ab6;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Contenido principal */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* Buscador */
+.buscador {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.buscador h2 {
+    margin-bottom: 15px;
+    color: #6c4ab6;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.buscador input:focus {
+    outline: none;
+    border-color: #6c4ab6;
+}
+
+/* Canciones */
+.canciones {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.canciones h2 {
+    color: #6c4ab6;
+    margin-bottom: 15px;
+}
+
+/* Cada canción */
+.cancion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f7f4fb;
+    border-radius: 8px;
+}
+
+.cancion:hover {
+    background: #eee8f7;
+}
+
+.cancion h3 {
+    color: #333;
+}
+
+.cancion p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Botones */
+button {
+    background: #6c4ab6;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #563895;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .cancion {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
