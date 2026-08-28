@@ -1,20 +1,24 @@
+/* Estilos generales */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f3ff;
-    color: #29223d;
+    background: #f3f4f8;
+    color: #222;
+    min-height: 100vh;
 }
 
+/* Encabezado */
 header {
-    background: linear-gradient(135deg, #6c4ab6, #9b6de3);
+    background: linear-gradient(135deg, #6c63ff, #8b5cf6);
     color: white;
     text-align: center;
     padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
@@ -24,37 +28,49 @@ header h1 {
 
 header p {
     font-size: 16px;
+    opacity: 0.9;
 }
 
+/* Contenido principal */
 main {
     width: 90%;
-    max-width: 900px;
+    max-width: 800px;
     margin: 30px auto;
 }
 
-section {
-    background-color: white;
-    border-radius: 15px;
+/* Buscador */
+.buscador {
+    background: white;
     padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
     margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-h2 {
-    margin-bottom: 20px;
+.buscador h2 {
+    margin-bottom: 15px;
+    font-size: 21px;
 }
 
 .buscador input {
     width: 100%;
-    padding: 15px;
-    border: 2px solid #ddd5f2;
-    border-radius: 10px;
-    font-size: 16px;
+    padding: 14px 16px;
+    border: 2px solid #e2e2e8;
+    border-radius: 12px;
+    font-size: 15px;
     outline: none;
 }
 
 .buscador input:focus {
-    border-color: #8b5fd3;
+    border-color: #6c63ff;
+}
+
+/* Sección de canciones */
+.canciones {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
 }
 
 .titulo-seccion {
@@ -65,113 +81,108 @@ h2 {
 }
 
 .titulo-seccion h2 {
-    margin: 0;
+    font-size: 22px;
 }
 
+/* Botones */
 button {
-    background-color: #7651c7;
+    background: #6c63ff;
     color: white;
     border: none;
-    padding: 12px 18px;
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 11px 17px;
+    border-radius: 10px;
     font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
-    background-color: #5d3da5;
+    background: #554be0;
+    transform: translateY(-2px);
 }
 
+/* Tarjeta de cada canción */
 .cancion {
     display: flex;
     align-items: center;
+    gap: 15px;
+    background: #f7f7fb;
     padding: 15px;
     margin-bottom: 12px;
-    background-color: #f8f6fd;
-    border-radius: 10px;
+    border-radius: 14px;
+    border: 1px solid #eeeeF4;
+    transition: 0.2s;
 }
 
-.icono {
-    font-size: 28px;
-    margin-right: 15px;
+.cancion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
 }
 
-.informacion {
+/* Icono de música */
+.icono-musica {
+    width: 50px;
+    height: 50px;
+    background: #e5e2ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+/* Información de la canción */
+.cancion div:nth-child(2) {
     flex: 1;
 }
 
-.informacion h3 {
+.cancion h3 {
+    font-size: 16px;
     margin-bottom: 5px;
 }
 
-.informacion p {
-    color: #777;
-}
-
-.genero {
-    background-color: #e7ddfa;
-    color: #6743aa;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-}
-
-.tarjetas {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.tarjeta {
-    flex: 1;
-    min-width: 180px;
-    background-color: #f8f6fd;
-    padding: 20px;
-    border-radius: 12px;
-}
-
-.tarjeta span {
-    font-size: 30px;
-}
-
-.tarjeta h3 {
-    margin: 10px 0 5px;
-}
-
-.tarjeta p {
-    color: #777;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #777;
+.cancion p {
     font-size: 14px;
+    color: #777;
 }
 
+/* Botón de reproducir */
+.cancion > button {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+/* Adaptación para celular */
 @media (max-width: 600px) {
 
+    header {
+        padding: 30px 15px;
+    }
+
     header h1 {
-        font-size: 25px;
+        font-size: 26px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
     }
 
     .titulo-seccion {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 12px;
     }
 
     .titulo-seccion button {
         width: 100%;
     }
 
-    .cancion {
-        flex-wrap: wrap;
-        gap: 10px;
+    .canciones,
+    .buscador {
+        padding: 18px;
     }
-
-    .genero {
-        margin-left: 43px;
-    }
-
 }
